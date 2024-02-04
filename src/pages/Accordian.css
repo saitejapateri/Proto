@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Axiforma-Book";
+  src: url("../fonts//Axiforma-Book.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Axiforma-Medium";
+  src: url("../fonts//Axiforma-Medium.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Axiforma-SemiBold";
+  src: url("../fonts//Axiforma-SemiBold.ttf");
+  font-style: normal;
+}
+
+
+.MuiAccordionSummary-content{
+    color: #919EAB;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.MuiAccordionDetails-root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #161c24;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#titles{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#start-button {
+  display: flex;
+  flex-direction: row;
+  width: 56.16px;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Axiforma-SemiBold", sans-serif;
+}
+
+#start {
+  font-family: "Poppins";
+  color: #0b58f5;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "Axiforma-Book";
+  src: url("../fonts//Axiforma-Book.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Axiforma-Medium";
+  src: url("../fonts//Axiforma-Medium.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Axiforma-SemiBold";
+  src: url("../fonts//Axiforma-SemiBold.ttf");
+  font-style: normal;
+}
+
+#course-page{
+  width: 100%;
+  height : 100%
+}
+
+#heading-div {
+  display: flex;
+  flex-direction: row;
+  width: 819.5px;
+  height: 30px;
+  margin-top: 35px;
+  margin-left: 33.5px;
+  align-items: center;
+}
+
+#img-span {
+  width: 22px;
+  height: 19.602px;
+  stroke-width: 3px;
+  stroke: #252525;
+}
+
+#name {
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.25px;
+  margin-left: 29.5px;
+  width: 685px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* #design {
+  width: 63px;
+} */
+.MuiChip-label{
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+
+#img-span:hover {
+  cursor: pointer;
+}
+
+#slider-div {
+  width: 328px;
+  height: 21px;
+  margin-top: 18px;
+  margin-left: 85px;
+  align-items: center;
+  display: flex;
+}
+
+#Avg {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 12px;
+}
+
+#des-div {
+  height: 188px;
+  width: 1095px;
+  margin-left: 85px;
+  margin-top: 31px;
+}
+
+#title-div {
+  height: 26px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-family: "Axiforma-SemiBold", sans-serif;
+}
+
+#para-div {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 1095px;
+  height: 154px;
+  margin-top: 8px;
+  font-family: "Axiforma-SemiBold", sans-serif;
+}
+
+#continue-reading-div {
+  width: 899px;
+  height: 450px;
+  margin-left: 56px;
+  margin-top: 40px;
+  /* background-color: greenyellow; */
+}
+
+#continue-reading {
+  color: #000;
+  font-family: "Axiforma-SemiBold", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+#pdfs{
+  display: flex;
+  flex-direction: row;
+  width: 919px;
+  height: 80px;
+  gap: 22px;
+  margin-top: 10px;
+}
+
+#units-div{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  align-items: center;
+  height: 35px;
+  gap: 35px;
+}
+
+#accordians{
+  height: 44px;
+  margin-top: 24px;
+}
+
+.MuiAccordionSummary-root,.MuiAccordion-region{
+  background-color: #fff !important;
+}

@@ -1,0 +1,19 @@
+#search {
+    height: 35px;
+    width: 144px;
+    display: flex;
+    flex-direction: row;
+    font-family: "Axiforma-SemiBold", sans-serif;
+    border-radius: 6.64px;
+    border: 1px solid #f4f6f8;
+    background: #e5eaef;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #logo {
+    width: 17.514px;
+    height: 18.329px;
+    flex-shrink: 0;
+    margin-right: 11.38px;
+  }

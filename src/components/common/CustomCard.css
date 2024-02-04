@@ -1,0 +1,34 @@
+#pdf-div {
+  width: 248px;
+  height: 60px;
+  display: flex;
+  flex-direction: coloum;
+  gap: 15px;
+}
+
+#document-img {
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  background: #dfe3e8;
+  border-radius: 5px;
+}
+
+#pdf-name {
+  color: #161c24;
+  font-family: "Axiforma-Book", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  width: 135px;
+  line-height: normal;
+  padding-top: 10px;
+}
+
+#right-button {
+  width: 13.5px;
+  height: 12.14px;
+  stroke-width: 2px;
+  stroke: #454f5b;
+  padding-top: 20px;
+}

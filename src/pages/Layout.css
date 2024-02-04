@@ -1,0 +1,255 @@
+.dashboard-layout {
+  max-width: 1286px;
+  width: 100%;
+  height: 1541px;
+  box-sizing: border-box;
+}
+
+#header-div {
+  width: 100%;
+  height: 89px;
+  border-bottom: 1px solid #dfe3e8;
+}
+
+#dashboard-text-div {
+  width: 114px;
+  height: 28px;
+  margin-top: 4px;
+  margin-left: 18px;
+  color: var(--Basic-700, #2e3a59);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+#details-div {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  width: 1237px;
+  /* height: 80px; */
+  margin-left: 14px;
+}
+
+.container-div {
+  display: flex;
+  flex-direction: row;
+}
+
+#left-div {
+  width: 897px;
+  height: 897px;
+  margin-top: 28px;
+  margin-left: 20px;
+}
+
+#right-div {
+  width: 319px;
+  height: 897px;
+  margin-top: 28px;
+  margin-left: 22px;
+}
+
+#recent-assessment-div {
+  width: 897px;
+  height: 352px;
+  border-radius: 10px;
+  border: 1px solid #f4f6f8;
+  box-shadow: 10px 10px 32px 0px rgba(22, 22, 22, 0.04);
+}
+
+#recent-assessment-details {
+  height: 28px;
+  display: flex;
+  gap: 35%;
+  margin-left: 20px;
+  margin-top: 16px;
+  margin-bottom: 15px;
+}
+
+#recent-assessment-details span {
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+#recent-assessment-details ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  list-style: none;
+}
+
+#recent-assessment-details li {
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#recent-assessment-details ul li:nth-child(1)::before {
+  content: "•";
+  color: blue;
+  margin-right: 2px;
+  font-size: 24px;
+}
+
+#recent-assessment-details ul li:nth-child(2)::before {
+  content: "•";
+  color: red;
+  margin-right: 2px;
+  font-size: 24px;
+}
+
+.assessment-div {
+  width: 897px;
+  height: 535px;
+  border-radius: 10px;
+  margin-top: 21px;
+  border: 1px solid #f4f6f8;
+  /* background-color: pink; */
+  /* overflow: hidden; */
+}
+
+#profile-div {
+  height: 108px;
+  width: 319px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#profile-div span {
+  color: #212b36;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+#profile-div div {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  background: #f4f6f8;
+  margin-top: 12px;
+}
+
+#profile-div #naming {
+  display: flex;
+  flex-direction: column;
+  width: 241px;
+  margin-left: 10px;
+  margin-top: 0;
+}
+
+#naming span:nth-child(1) {
+  color: #212b36;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+#naming span:nth-child(2) {
+  color: #919eab;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+#calendar-div {
+  width: 329px;
+  height: 274px;
+  margin-bottom: 30px;
+}
+
+#calendar-title {
+  color: var(--Basic-700, #2e3a59);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+#leaderboard-div {
+  width: 319px;
+  height: 463px;
+  border-radius: 10px;
+  /* border: 1px solid #f4f6f8; */
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#course-div {
+  width: 1042px;
+  height: 291px;
+  margin-top: 104px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 21px;
+}
+
+@media screen and (min-width: 1500px) {
+  .dashboard-layout {
+    max-width: 1496px;
+    width: 100%;
+  }
+  #details-div {
+    gap: 30px;
+    width: 1300px;
+  }
+  #left-div {
+    width: 1040px;
+  }
+
+  #right-div {
+    width: 350px;
+  }
+
+  #recent-assessment-div {
+    width: 100%;
+    gap: 50%;
+  }
+  #recent-assessment-details ul{
+    gap: 40px;
+  }
+  #recent-assessment-details {
+    width: 1040px;
+  }
+
+  .assessment-div {
+    width: 100%;
+  }
+
+  #profile-div {
+    width: 100%;
+  }
+
+  #calendar-div {
+    width: 100%;
+  }
+
+  #leaderboard-div {
+    width: 100%;
+  }
+
+  #course-div {
+    width: 1271px;
+    justify-content: space-between;
+  }
+}
