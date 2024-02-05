@@ -10,7 +10,6 @@ function Root() {
   const path = useLocation();
   const loginPage = path.pathname === "/" ? true : false;
   const isLoginPage = !loginPage && isLogin;
-  console.log("login is ", isLogin);
 
   return (
     <Grid container bgcolor={palette.primary[0]}>

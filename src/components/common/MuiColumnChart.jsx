@@ -4,6 +4,8 @@ import { useTheme } from '@mui/material/styles'
 import palette from '../../theme/palette'
 import { useMediaQuery } from '@mui/material'
 
+const categories = [1,2,3,4,5,6,7,8,9,10]
+
 
 const MuiColumnChart = ({
   series,

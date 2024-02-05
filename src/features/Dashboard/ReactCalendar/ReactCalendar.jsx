@@ -1,13 +1,18 @@
 import { useState } from "react";
 import Calendar from "react-calendar";
-import "./CalendarC.css";
+import {styled} from '@mui/material/styles'
+import 'react-calendar/dist/Calendar.css';
+import './ReactCalendar.css'
 
-function CalendarC() {
+const StyledCalendar = styled(Calendar)({
+})
+
+
+function ReactCalendar() {
   const [value, onChange] = useState(new Date());
 
   return (
-    <Calendar
-      id="calendar"
+    <StyledCalendar
       onChange={onChange}
       value={value}
       next2Label={null}
@@ -17,4 +22,4 @@ function CalendarC() {
   );
 }
 
-export default CalendarC;
+export default ReactCalendar;

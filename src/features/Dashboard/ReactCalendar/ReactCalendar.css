@@ -1,0 +1,29 @@
+.react-calendar {
+  border: none;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  border: 1px solid #F4F6F8;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-bottom: 15px;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+.react-calendar__tile--active{
+    border-radius: 10px;
+}
+
+.react-calendar__navigation__label__labelText{
+    color: #0B58F5;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+}
