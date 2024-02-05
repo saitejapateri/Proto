@@ -15,6 +15,11 @@ function LeftNavigation() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  //handling dashboard click
+  const handleDashboard = () => {
+    navigate('/dashboard')
+  }
+
   //handling logout 
   const handleLogout = () => {
     navigate('/');
@@ -71,6 +76,7 @@ function LeftNavigation() {
               width="24px"
               height="24px"
               alt="dashboardLogo"
+              onClick={handleDashboard}
             />
           </Box>
         </Box>

@@ -10,7 +10,7 @@ const commonStyles = {
 function CourseSkeleton() {
   return (
     <>
-      <Stack direction="row" spacing={{md : 2,lg : 4}} sx={{marginLeft : '23px'}}>
+      <Stack direction="row" spacing={{md : 2,lg : 4}} sx={{marginTop : '15px'}}>
         <Box>
           <Skeleton
             animation="wave"

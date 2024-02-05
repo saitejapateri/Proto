@@ -9,7 +9,6 @@ import LeaderBoardDrawar from "./LeaderBoardDrawar.js";
 import MuiCustomTableWithSortandSelect from "../components/common/MuiCustomTableWithSortandSelect.jsx";
 import MuiColumnChart from "../components/common/MuiColumnChart.jsx";
 import palette from "../theme/palette.js";
-import CalendarC from "./CalendarC.js";
 import Profile from "./Profile.js";
 import AssessmentSkeleton from "./AssessmentSkeleton.jsx";
 import CourseSkeleton from "./CourseSkeleton.jsx";
@@ -175,7 +174,6 @@ function Layout() {
             </div>
             <div id="calendar-div">
               <span id="calendar-title">Calendar</span>
-              <CalendarC />
             </div>
             <div id="leaderboard-div" onClick={handleDrawar}>
               <LeaderBoardCard data={data.leaderboard} />

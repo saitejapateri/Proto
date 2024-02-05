@@ -12,9 +12,9 @@ const LeaderRanking = ({ data, index, value }) => {
       height={"65px"}
       sx={{
         backgroundColor: index === 1 ? palette.grey[100] : "transparent",
-        borderRadius : '5px',
-        paddingLeft: '10px',
-        paddingRight : '10px'
+        borderRadius: "5px",
+        paddingLeft: "10px",
+        paddingRight: "10px",
       }}
     >
       <Stack direction={"row"} alignItems={"center"} gap={"27px"}>
@@ -62,9 +62,18 @@ const LeaderRanking = ({ data, index, value }) => {
         justifyContent={"center"}
         alignItems={"center"}
         borderRadius={"50%"}
-        bgcolor={palette.primary[200]}
+        bgcolor={data.rank <= 3 ? palette.success[200] : palette.primary[200]}
       >
-        {data.rank}
+        <Typography
+          sx={{
+            color :data.rank <=3 ? palette.success.main : palette.primary.main,
+            fontWeight: "300",
+            fontSize : '12px',
+            lineHeight : '18.9px'
+          }}
+        >
+          {data.rank}
+        </Typography>
       </Stack>
     </Stack>
   );
