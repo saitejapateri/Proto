@@ -16,7 +16,7 @@ function Courses({ courses }) {
         Your courses
       </Typography>
       {courses ? (
-        <Stack direction="row" spacing={2.75} sx={{ marginTop: "15px" }}>
+        <Stack direction="row" spacing={2.75} sx={{ marginTop: "0.93rem" }}>
           {courses?.map((course, index) => (
             <MuiCustomCourseCard
               id={course.id}
