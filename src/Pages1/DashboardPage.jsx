@@ -3,14 +3,14 @@ import palette from "../theme/palette";
 import { Grid, Box, Typography } from "@mui/material";
 import AssessmentDetailsSkeleton from "../features/Dashboard/AssessmentDetailsSkeletion";
 import AssessmentDetailCard from "../components/common/AssessmentDetailCard";
-import RecentAssessments from "../features/Dashboard/RecentAssessments";
+import RecentAssessments from "../features/Dashboard/RecentAssessments/RecentAssessments.jsx";
+import MuiCustomTableWithSortandSelect from "../components/common/MuiCustomTableWithSortandSelect";
 import ProfileCard from "../features/Dashboard/ProfileCard";
 import ReactCalendarComp from "../features/Dashboard/ReactCalendarComp";
 import LeaderBoardCard from "../components/common/LeaderBoardCard";
 import MuiLeaderboardDrawar from "../features/Dashboard/MuiLeaderboardDrawar";
 import CourseSkeleton from "../pages/CourseSkeleton";
 import Courses from "../features/Dashboard/Courses.jsx";
-import typography from "../theme/typography";
 
 function DashboardPage() {
   const [data, setData] = useState({});
@@ -66,7 +66,6 @@ function DashboardPage() {
         <Grid
           item
           xs
-          // style={{ height: "80px" }}
           sx={{
             marginLeft: "14px",
             display: "flex",
@@ -92,33 +91,37 @@ function DashboardPage() {
           )}
         </Grid>
 
-        {/* assessments grid */}
+        {/*recent_assessment && assessments grid */}
         <Grid
           container
           item
           direction="row"
           sx={{ gap: "22px", marginLeft: "20px" }}
         >
+          {/* left grid */}
           <Grid
             container
             item
             md={8.37}
-            sx={{ display: "flex", flexDirection: "column", gap: "21px" }}
-            style={{ height: "887px" }}
+            sx={{display : 'flex', flexDirection : 'column'}}
           >
             <Grid
               item
               md
-              // bgcolor={palette.success[200]}
+              sx={{border : `1px solid ${palette.grey[100]}`, borderRadius : '10px', height : '352px', marginBottom : '1.31rem'}}
             >
               <RecentAssessments recent_assessments={data.recent_assessments} />
             </Grid>
             <Grid
               item
               md
-              bgcolor={palette.success[500]}
-            ></Grid>
+              sx={{height : '535px',border : `1px solid ${palette.grey[100]}`, borderRadius : '10px'}}
+            >
+              <MuiCustomTableWithSortandSelect data={assessmentData} />
+            </Grid>
           </Grid>
+
+          {/* right grid */}
           <Grid
             container
             item
@@ -139,17 +142,24 @@ function DashboardPage() {
               <LeaderBoardCard data={data.leaderboard} onClick={handleDrawar} />
             </Grid>
           </Grid>
+
         </Grid>
+
+
+
+
+
 
         {/* course grid */}
         <Grid
-          container
+          item
           md
-          sx={{ marginLeft: "20px", marginTop: "20px", marginBottom: "55px" }}
+          sx={{ marginLeft: "20px", marginTop: "200px", marginBottom: "55px" }}
         >
-          {/* <CourseSkeleton /> */}
-          <Courses courses={data.courses} />
+          {/* <Courses courses={data.courses} /> */}
         </Grid>
+
+
         <MuiLeaderboardDrawar
           data={data.leaderboard}
           open={drawerState}
