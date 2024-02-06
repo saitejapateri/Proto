@@ -8,10 +8,14 @@ import {
   Skeleton,
   Stack,
   Pagination,
-  Typography
+  Typography,
+  Box
 } from "@mui/material";
 import MuiCustomTableHeaderRowWithSortandSelect from "./MuiCustomTableHeaderRowWithSortandSelect";
 import MuiCustomStudentTableRow from "./MuiCustomStudentTableRow";
+import palette from "../../theme/palette";
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 const HeaderArr = [
   { label: "Subject", isSortable: false, isSelectable: false },
@@ -38,6 +42,22 @@ const MuiCustomTableWithSortandSelect = (props) => {
   } = props;
 
   const [startingIndex,setStartingIndex] = useState(0) 
+  const [semester,setSemester] = useState(1)
+
+  console.log(data)
+
+  const assessments = data.assessments?.filter((assessment) => assessment.semester === semester)
+
+  //handling Semester
+  const handleSemester = (arrow) => {
+    if(arrow === 'right' && semester<3){
+      setSemester(prevState => prevState + 1);
+    }
+    else if(arrow === 'left' && semester!=1)
+    {
+      setSemester(prevState => prevState - 1);
+    }
+  }
 
   const tablePaginationHandler = (event,value) => {
     console.log(value)
@@ -50,11 +70,19 @@ const MuiCustomTableWithSortandSelect = (props) => {
         sx={{
           boxShadow: "none",
           // marginTop: "1.5rem",
-          height: "535px",
+          // height: "535px",
+          padding : '0.875rem',
         }}
       >
-        {/* <Typography sx={{fontWeight : '500', fontSize : '20px', fontFamily : 'Poppins'}}>Assessments</Typography> */}
-        <Table sx={{ width: "100%" }} aria-label="sticky table">
+        <Stack direction='row' justifyContent={'space-between'}>
+          <Typography variant="h5" >Assessments</Typography>
+          <Stack direction='row' alignItems={'normal'} sx={{cursor : 'pointer'}}>
+            <KeyboardArrowLeftIcon onClick={()=>handleSemester('left')} />
+            <Typography variant='button' sx={{fontWeight : '400'}}>Semester 0{semester} </Typography>
+            <KeyboardArrowRightIcon onClick={()=>handleSemester('right')}/>
+          </Stack>
+        </Stack>
+        <Table sx={{ width: "100%"}} aria-label="sticky table">
           <TableHead
             sx={{
               // position: "",
@@ -70,11 +98,11 @@ const MuiCustomTableWithSortandSelect = (props) => {
             />
           </TableHead>
           <TableBody>
-            {data.assessments?.slice(startingIndex,startingIndex + 10).map((stu, i) => (
+            {assessments?.slice(startingIndex,startingIndex + 8).map((stu, i) => (
               <MuiCustomStudentTableRow
                 stu={stu}
                 key={i}
-                viewStudentResult={viewStudentResult}
+                viewStudentResult={viewStudentResult} 
               />
             ))}
           </TableBody>
@@ -85,10 +113,10 @@ const MuiCustomTableWithSortandSelect = (props) => {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        sx={{ marginTop: "1rem" }}
+        // sx={{ marginTop: "1rem" }}
       >
         <Pagination
-          count={Math.ceil(data.assessments?.length / 10)}
+          count={Math.ceil(data.assessments?.length / 8)}
           //   filtered_studentAssessmentList?.filter((stu) =>
           //     submissionTypesToShowinStudentTable.includes(stu.submission_type)
           //   ).length / 15
