@@ -9,7 +9,7 @@ import ReactCalendarComp from "../features/Dashboard/ReactCalendarComp";
 import LeaderBoardCard from "../components/common/LeaderBoardCard";
 import MuiLeaderboardDrawar from "../features/Dashboard/MuiLeaderboardDrawar";
 import CourseSkeleton from "../pages/CourseSkeleton";
-import Courses from "../features/Dashboard/Courses";
+import Courses from "../features/Dashboard/Courses.jsx";
 import typography from "../theme/typography";
 
 function DashboardPage() {
