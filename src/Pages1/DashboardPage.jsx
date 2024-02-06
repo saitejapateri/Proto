@@ -154,9 +154,9 @@ function DashboardPage() {
         <Grid
           item
           md
-          sx={{ marginLeft: "20px", marginTop: "200px", marginBottom: "55px" }}
+          sx={{ marginLeft: "1.25rem", marginTop: "1.25rem", marginBottom: "55px" }}
         >
-          {/* <Courses courses={data.courses} /> */}
+          <Courses courses={data.courses} />
         </Grid>
 
 
