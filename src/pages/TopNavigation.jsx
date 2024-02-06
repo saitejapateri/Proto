@@ -7,7 +7,7 @@ function TopNavigation() {
     
   return (
     <>
-    <Box width={'100%'} height={'80px'} sx={{display:'flex', borderBottom : `2px solid ${palette.grey[200]}`}} bgcolor='palette.grey[100]' justifyContent={'space-between'}>
+    <Box width={'100%'} height={'80px'} sx={{display:'flex',flexDirection : 'row', borderBottom : `2px solid ${palette.grey[200]}`}} bgcolor='palette.grey[100]' justifyContent={'space-between'}>
         <Stack direction='row'>
             <Typography
             sx={{fontFamily : 'Poppins', fontSize : '24px', fontWeight : '400', lineHeight : '32px', marginTop : '27px', marginLeft : '18px'}}

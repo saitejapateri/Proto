@@ -20,6 +20,11 @@ function LeftNavigation() {
     navigate('/dashboard')
   }
 
+  //handling course click
+  const handleCourseClick = () => {
+    window.scrollTo(0,document.body.scrollHeight)
+  }
+
   //handling logout 
   const handleLogout = () => {
     navigate('/');
@@ -27,7 +32,7 @@ function LeftNavigation() {
 
   return (
     <>
-      <Stack direction="column" bgcolor={palette.grey[100]}>
+      <Stack direction="column" bgcolor={palette.grey[100]} sx={{width : '80px'}}>
         <Box sx={{ margin: "22px 22px 30.98px 22px", cursor : 'pointer'}}>
           <img src={edwiselyLogo} width="36px" height="42.02px" alt='edwiselyLogo'/>
         </Box>
@@ -119,6 +124,7 @@ function LeftNavigation() {
               width="24px"
               height="24px"
               alt="courseLogo"
+              onClick={handleCourseClick}
             />
           </Box>
         </Box>

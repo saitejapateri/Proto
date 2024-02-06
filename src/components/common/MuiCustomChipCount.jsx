@@ -13,15 +13,16 @@ export default function MuiCustomChipCount({label,selected,padding,...props}) {
   return (
     <Chip  sx={{
         width: 'auto',
-        height: '16px',
+        height: '20px',
+        borderRadius : 0,
         mb:'2px',
-        background:(theme)=>selected ?theme.palette.grey[400]:theme.palette.grey[100],
-        color:selected ?'#fff':'#919EAB',
-        fontSize:'12px',
+        background:(theme)=>selected ? props.bgcolor :theme.palette.grey[100],
+        color:selected ? props.color :'#919EAB',
+        fontSize:'14px',
         ml:0.5,
         ...props,
         '& .MuiChip-label': {
-          p: padding, 
+          p: '4px 6px', 
         },
       }}
       label={label} />

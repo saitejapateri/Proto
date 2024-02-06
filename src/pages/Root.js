@@ -12,23 +12,30 @@ function Root() {
   const isLoginPage = !loginPage && isLogin;
 
   return (
-    <Grid container bgcolor={palette.primary[0]}>
-      {isLoginPage && (
-        <Stack sx={{ width: "80px" }}>
-          <LeftNavigation />
-        </Stack>
-      )}
-      <Grid container item xs>
-        {isLoginPage && (
-          <Grid item xs={12} style={{ height: "80px" }}>
-            <TopNavigation />
-          </Grid>
-        )}
-        <Grid item xs={12}>
-          <Outlet />
-        </Grid>
-      </Grid>
-    </Grid>
+    // <Grid container bgcolor={palette.primary[0]}>
+    //   {isLoginPage && (
+    //     <Stack sx={{ width: "80px" }}>
+    //       <LeftNavigation />
+    //     </Stack>
+    //   )}
+    //   <Grid container item xs>
+    //     {isLoginPage && (
+    //       <Grid item xs={12} style={{ height: "80px" }}>
+    //         <TopNavigation />
+    //       </Grid>
+    //     )}
+    //     <Grid item xs={12}>
+    //       <Outlet />
+    //     </Grid>
+    //   </Grid>
+    // </Grid>
+    <Stack direction='row'>
+      <Stack><LeftNavigation /></Stack>
+      <Stack sx={{width : '100%'}}>
+        <TopNavigation />
+        <Outlet />
+      </Stack>
+    </Stack>
   );
 }
 

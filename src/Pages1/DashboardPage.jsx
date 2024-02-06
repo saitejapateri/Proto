@@ -9,7 +9,6 @@ import ProfileCard from "../features/Dashboard/ProfileCard";
 import ReactCalendarComp from "../features/Dashboard/ReactCalendarComp";
 import LeaderBoardCard from "../components/common/LeaderBoardCard";
 import MuiLeaderboardDrawar from "../features/Dashboard/MuiLeaderboardDrawar";
-import CourseSkeleton from "../pages/CourseSkeleton";
 import Courses from "../features/Dashboard/Courses.jsx";
 
 function DashboardPage() {
@@ -146,15 +145,11 @@ function DashboardPage() {
         </Grid>
 
 
-
-
-
-
         {/* course grid */}
         <Grid
           item
           md
-          sx={{ marginLeft: "1.25rem", marginTop: "1.25rem", marginBottom: "55px" }}
+          sx={{ marginLeft: "1.25rem", marginTop: "1.25rem", marginBottom: "55px"}}
         >
           <Courses courses={data.courses} />
         </Grid>
