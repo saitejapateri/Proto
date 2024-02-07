@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment} from "react";
 import palette from "../theme/palette";
 import { Grid, Box, Typography } from "@mui/material";
 import AssessmentDetailsSkeleton from "../features/Dashboard/AssessmentDetailsSkeletion";
@@ -61,7 +61,7 @@ function DashboardPage() {
       >
         Dashboard
       </Typography>
-      <Grid container bgcolor={palette.primary[0]}>
+      <Grid container>
         <Grid
           item
           xs

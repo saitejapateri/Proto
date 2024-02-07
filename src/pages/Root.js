@@ -29,10 +29,10 @@ function Root() {
     //     </Grid>
     //   </Grid>
     // </Grid>
-    <Stack direction='row'>
-      <Stack><LeftNavigation /></Stack>
+    <Stack direction='row' bgcolor={palette.primary[0]}>
+      {isLoginPage && <Stack><LeftNavigation /></Stack>}
       <Stack sx={{width : '100%'}}>
-        <TopNavigation />
+        {isLoginPage && <TopNavigation />}
         <Outlet />
       </Stack>
     </Stack>

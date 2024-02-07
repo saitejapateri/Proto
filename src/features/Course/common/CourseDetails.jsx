@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import { Grid, Stack, Typography } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
@@ -19,9 +19,7 @@ const colors = [
   palette.warning[800],
 ];
 
-function CourseDetails({ data }) {
-  console.log(data);
-  console.log(data?.percentage);
+function CourseDetails({ id,name,tag,percentage }) {
 
   //handling BackButtonClick
   const navigate = useNavigate();
@@ -30,7 +28,7 @@ function CourseDetails({ data }) {
   };
 
   return (
-    <Grid md={8} lg={12} sx={{ marginLeft: "2.09rem", marginTop : "2.18rem"}}>
+    <Grid item md={8} lg={12} sx={{ marginLeft: "2.09rem", marginTop: "2.18rem" }}>
       <Stack direction="row" alignItems={"center"} sx={{ gap: "1.25rem" }}>
         <KeyboardBackspaceIcon
           sx={{ cursor: "pointer" }}
@@ -45,31 +43,44 @@ function CourseDetails({ data }) {
             whiteSpace: "nowrap",
           }}
         >
-          {data?.name}
+          {name}
         </Typography>
         <MuiCustomChipCount
-          label={data?.tag}
-          color={colors[data?.id - 1]}
-          bgcolor={bgColors[data?.id - 1]}
+          label={tag}
+          color={colors[id - 1]}
+          bgcolor={bgColors[id - 1]}
         />
       </Stack>
-      <Stack direction="row" alignItems={'center'} sx={{gap : '0.75rem',marginLeft : '3rem'}}>
+      <Stack
+        direction="row"
+        alignItems={"center"}
+        sx={{ gap: "0.75rem", marginLeft: "3rem" }}
+      >
         <Slider
           size="medium"
-          defaultValue={60}
+          defaultValue={percentage}
           valueLabelDisplay="auto"
           disabled
           max={100}
           min={0}
           sx={{
             width: 255,
+            '&.Mui-disabled .MuiSlider-track': {
+              color: palette.primary.main
+            },
             "& .MuiSlider-thumb": {
               width: 0,
-              height: 0,
+              height: 10,
             },
           }}
         />
-        <Typography variant='subtitle2' color={palette.primary.main} sx={{fontWeight : '400'}}>Avg. {data?.percentage}%</Typography>
+        <Typography
+          variant="subtitle2"
+          color={palette.primary.main}
+          sx={{ fontWeight: "400" }}
+        >
+          Avg. {percentage}%
+        </Typography>
       </Stack>
     </Grid>
   );

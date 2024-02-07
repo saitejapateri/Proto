@@ -1,25 +1,29 @@
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react'
-import rightButton from '../../images/rightbutton.svg'
-import documentImg from '../../images/document.svg'
-import './CustomCard.css'
+import documentImg  from '../../images/document.svg'
+import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
+import palette from '../../theme/palette';
 
-const CustomCard = ({ name,url, onClick}) => {
-
+const CustomCard = ({ name, onClick,width = '285px', height = '80px' }) => {
     return (
         <Box sx={{
-            width: '285px',
-            height: '80px',
-            padding: '10px',
-            borderRadius: '8px',
-            boxShadow: '0px 0px 15px 0px rgba(16, 24, 40, 0.04)',
+            width: width,
+            height: height,
+            border : `1px solid ${palette.grey[100]}`,
+            boxShadow: '10px 10px 32px -4px rgba(16, 24, 40, 0.04);',
+            display : 'flex',
+            borderRadius : '10px',
+            gap : '15px',
+            paddingRight : '2.28rem',
             cursor : 'pointer'
-        }}>
-            <div id="pdf-div" onClick={onClick}>
-                <span id="document-img"><img src={documentImg}/></span>
-                <span id="pdf-name">{name}</span>
-                <span id="right-button"><img src={rightButton}/></span>
-            </div>
+        }} alignItems={'center'} onClick={onClick}>
+            <>
+            <Box sx={{backgroundColor : palette.grey[200],padding : '0.9375rem',marginLeft : '0.625rem', borderRadius : '5px'}}>
+                <img src={documentImg} alt="" />
+            </Box>
+            <Typography variant='subtitle2'>{name}</Typography>
+            <ArrowForwardOutlinedIcon />
+            </>
         </Box>
     )
 }

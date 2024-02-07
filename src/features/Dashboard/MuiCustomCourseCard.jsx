@@ -57,6 +57,7 @@ function MuiCustomCourseCard({ name, tag, image, id }) {
   const navigate = useNavigate(id);
   const handleClick = () => {
     navigate(`/course/${id}`);
+    window.scrollTo(0,0);
   };
 
   return (
