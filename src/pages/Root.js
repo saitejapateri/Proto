@@ -31,7 +31,7 @@ function Root() {
     // </Grid>
     <Stack direction='row'>
       <Stack><LeftNavigation /></Stack>
-      <Stack sx={{width : '100%'}}>
+      <Stack sx={{width : '100%'}} bgcolor={palette.primary[0]}>
         <TopNavigation />
         <Outlet />
       </Stack>
